@@ -9,7 +9,15 @@ In order for the application to be run locally, you will need to have set up aut
 
 ## Deploy To Azure
 Publish the sample as an Azure Webjob (trigger) on an App Service.  By default, an app service will have created a system assigned managed identity. In order for this sample to be ran correctly,
-the managed identity will need Graph Api permissions.  Unfortunately, it is not currently possible to set this from the Azure portal.  The following powershell script will need to be utilized.  Make sure to replace the WEB APP MSI Identity with your managed identity value.
+the managed identity will need Graph Api permissions.  Unfortunately, it is not currently possible to set this from the Azure portal.
+However, the following powershell script can be utilized to grant the needed permissions.
+This script does require the AzureAD module to be installed.  If not installed, just run the following to install it.
+```
+Install-Module AzureAD
+```
+
+Make sure to replace the WEB APP MSI Identity with your managed identity value.
+
 ```
 Connect-AzureAD
 $graph = Get-AzureADServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'"
