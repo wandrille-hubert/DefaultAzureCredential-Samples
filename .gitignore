@@ -81,3 +81,6 @@ $RECYCLE.BIN/
 AzureResourceGraphSample/.vs/*
 AzureResourceGraphSample/AzureResourceGraphSample/bin/*
 AzureResourceGraphSample/AzureResourceGraphSample/obj/*
+AzureGraphSample/.vs/*
+AzureGraphSample/AzureGraphSample/bin/*
+AzureGraphSample/AzureGraphSample/obj/*
