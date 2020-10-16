@@ -9,33 +9,8 @@ In order for the application to be run locally, you will need to have set up aut
 
 ## Deploy To Azure
 Publish the sample as an Azure Webjob (trigger) on an App Service.  By default, an app service will have created a system assigned managed identity. In order for this sample to be ran correctly,
-the managed identity will need Graph Api permissions.  Unfortunately, it is not currently possible to set this from the Azure portal.
-However, the following powershell script can be utilized to grant the needed permissions.
-This script does require the AzureAD module to be installed.  If not installed, just run the following to install it.
-```
-Install-Module AzureAD
-```
-
-Make sure to replace the WEB APP MSI Identity with your managed identity value.
-
-```
-Connect-AzureAD
-$graph = Get-AzureADServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'"
-$groupReadPermission = $graph.AppRoles `
-    | where Value -Like "Group.Read.All" `
-    | Select-Object -First 1
-
-$msi = Get-AzureADServicePrincipal -ObjectId <WEB APP MSI Identity>
-
-New-AzureADServiceAppRoleAssignment `
-    -Id $groupReadPermission.Id `
-    -ObjectId $msi.ObjectId `
-    -PrincipalId $msi.ObjectId `
-    -ResourceId $graph.ObjectId
-```
-
-- [Reference](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/)
+the managed identity will need to at least have Read permissions on one resource.  For the sake of this sample, you can easily assign the role of Reader to the managed identity from within the Azure portal.
 
 Once setup correctly, go ahead and trigger the Webjob that you published.  To validate the success and results, view the logs of the webjob to view the output as Console.Write will write to the logs for a trigger webjob.
 
-A user assigned managed identity can also be utilized instead of the system assigned managed identity.  In order to use this, within the program go ahead and uncomment the property UserAssignedManagedIdentityId and set it with the Id of the user assigned managed identity.  Then uncomment the initialization of the DefaultAzureCredential utilizing the UserAssignedManagedIdentityId.  Then make sure the proper permissions have been given to the managed identity, by running the script above and make sure to provide the ObjectId of the managed identity.
+A user assigned managed identity can also be utilized instead of the system assigned managed identity.  In order to use this, within the program go ahead and uncomment the property UserAssignedManagedIdentityId and set it with the Id of the user assigned managed identity.  Then uncomment the initialization of the DefaultAzureCredential utilizing the UserAssignedManagedIdentityId.  Then make sure the managed identity has at least Read permissions on a resource.
