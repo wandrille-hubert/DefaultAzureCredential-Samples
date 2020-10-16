@@ -13,4 +13,5 @@ the managed identity will need to at least have Read permissions on one resource
 
 Once setup correctly, go ahead and trigger the Webjob that you published.  To validate the success and results, view the logs of the webjob to view the output as Console.Write will write to the logs for a trigger webjob.
 
+## User Assigned Managed Identity
 A user assigned managed identity can also be utilized instead of the system assigned managed identity.  In order to use this, within the program go ahead and uncomment the property UserAssignedManagedIdentityId and set it with the Id of the user assigned managed identity.  Then uncomment the initialization of the DefaultAzureCredential utilizing the UserAssignedManagedIdentityId.  Then make sure the managed identity has at least Read permissions on a resource.
