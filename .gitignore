@@ -84,3 +84,6 @@ AzureResourceGraphSample/AzureResourceGraphSample/obj/*
 AzureGraphSample/.vs/*
 AzureGraphSample/AzureGraphSample/bin/*
 AzureGraphSample/AzureGraphSample/obj/*
+AzureIdentitySample/.vs/*
+AzureIdentitySample/AzureIdentitySample/bin/*
+AzureIdentitySample/AzureIdentitySample/obj/*
