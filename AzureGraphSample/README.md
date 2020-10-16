@@ -38,4 +38,5 @@ New-AzureADServiceAppRoleAssignment `
 
 Once setup correctly, go ahead and trigger the Webjob that you published.  To validate the success and results, view the logs of the webjob to view the output as Console.Write will write to the logs for a trigger webjob.
 
+## User Assigned Managed Identity
 A user assigned managed identity can also be utilized instead of the system assigned managed identity.  In order to use this, within the program go ahead and uncomment the property UserAssignedManagedIdentityId and set it with the Id of the user assigned managed identity.  Then uncomment the initialization of the DefaultAzureCredential utilizing the UserAssignedManagedIdentityId.  Then make sure that the user assigned managed identity has been assigned on the App Service and the proper permissions have been given to the managed identity, by running the script above and make sure to provide the ObjectId of the managed identity.
