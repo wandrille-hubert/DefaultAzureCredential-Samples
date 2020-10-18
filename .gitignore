@@ -87,3 +87,4 @@ AzureGraphSample/AzureGraphSample/obj/*
 AzureIdentitySample/.vs/*
 AzureIdentitySample/AzureIdentitySample/bin/*
 AzureIdentitySample/AzureIdentitySample/obj/*
+*.ps1
