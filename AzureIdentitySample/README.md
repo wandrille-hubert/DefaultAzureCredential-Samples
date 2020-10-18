@@ -1,6 +1,6 @@
 # AzureIdentitySample
 
-This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing to authenticate with the older Microsoft.Azure.Management.* libraries.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to then be able to utilize
+This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing it to authenticate with the older Microsoft.Azure.Management.* libraries.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to then be able to utilize
 the [Microsoft.Azure.Management.Subscription](https://www.nuget.org/packages/Microsoft.Azure.Management.Subscription/) in order to return the list of subscriptions in the tenant.  Then for each subscription, by utilizing the [Azure.ResourceManager](https://www.nuget.org/packages/Azure.ResourceManager.Resources/) library, we will return the resource groups found within the subscription.  
 The sample can be run both locally as well as deployed to Azure.
 

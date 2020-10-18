@@ -1,6 +1,6 @@
 # AzureResourceGraphSample
 
-This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing to authenticate with the older Microsoft.Azure.Management.* libraries.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to then be able to utilize the [Microsoft.Azure.Management.ResourceGraph](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceGraph/) in order to return resources found within an Azure subscription.  
+This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing it to authenticate with the older Microsoft.Azure.Management.* libraries.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to then be able to utilize the [Microsoft.Azure.Management.ResourceGraph](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceGraph/) in order to return resources found within an Azure subscription.  
 The sample can be run both locally as well as deployed to Azure.  To begin, fill in the SubscriptionId.
 
 ## Local Run
