@@ -9,7 +9,7 @@ In order for the application to be run locally, you will need to have set up aut
 
 ## Deploy To Azure
 Publish the sample as an Azure Webjob (trigger) on an App Service.  By default, an app service will have created a system assigned managed identity. In order for this sample to be ran correctly,
-the managed identity will need to at least have Read permissions on one resource.  For testing purposes, you can easily assign the role of Reader to the managed identity from within the Azure portal and then remove the role/delete the managed identity when done.
+the managed identity will need to at least have Read permissions on one resource.  For testing purposes, you can easily assign the role of Reader to the managed identity from within the Azure portal and then remove the role/delete the managed identity when done.  After setting the role, wait about thirty seconds to a minute before triggering the webjob.
 
 Once setup correctly, go ahead and trigger the Webjob that you published.  To validate the success and results, view the logs of the webjob to view the output as Console.Write will write to the logs for a trigger webjob.
 
