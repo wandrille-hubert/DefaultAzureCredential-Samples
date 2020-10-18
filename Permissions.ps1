@@ -4,7 +4,7 @@ $groupReadPermission = $graph.AppRoles `
     | where Value -Like "Application.Read.All" `
     | Select-Object -First 1
 
-$msi = Get-AzureADServicePrincipal -ObjectId 61f91070-8bfc-4e1e-883c-e8b27df776ff
+$msi = Get-AzureADServicePrincipal -ObjectId MANAGEDIDENTITYOBJECTID
 
 New-AzureADServiceAppRoleAssignment `
     -Id $groupReadPermission.Id `
