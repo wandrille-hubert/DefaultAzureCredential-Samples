@@ -1,6 +1,6 @@
 # AzureGraphSample
 
-This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing to authenticate with the Microsoft.Graph package.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to be able to then query the Microsoft Graph api and return a list of applications.
+This sample demonstrates the usage of the new [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package and utilizing it to authenticate with the Microsoft.Graph package.  In this case, this console app demonstrates the usage of [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) to be able to then query the Microsoft Graph api and return a list of applications.
 The sample can be run both locally as well as deployed to Azure.  To begin, fill in the SubscriptionId.
 
 ## Local Run
@@ -33,8 +33,6 @@ New-AzureADServiceAppRoleAssignment `
     -PrincipalId $msi.ObjectId `
     -ResourceId $graph.ObjectId
 ```
-
-- [Reference](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/)
 
 Once setup correctly, go ahead and trigger the Webjob that you published.  To validate the success and results, view the logs of the webjob to view the output as Console.Write will write to the logs for a trigger webjob.
 

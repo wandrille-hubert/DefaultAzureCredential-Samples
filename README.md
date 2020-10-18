@@ -12,7 +12,7 @@ Have a sample you'd like to add? Open an issue and I'll create a branch for you 
 
 ## Reference
 
-- [Reference Link1](https://bing.com/)
+- [Reference](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/)
 
 ## License
 
