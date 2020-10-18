@@ -12,7 +12,7 @@ Have a sample you'd like to add? Open an issue and I'll create a branch for you 
 
 ## Reference
 
-- [Reference](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/)
+- [Powershell To Set Permissions](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/)
 
 ## License
 
