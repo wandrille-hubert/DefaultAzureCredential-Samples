@@ -78,3 +78,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+AzureResourceGraphSample/.vs/*
+AzureResourceGraphSample/AzureResourceGraphSample/bin/*
+AzureResourceGraphSample/AzureResourceGraphSample/obj/*
+AzureGraphSample/.vs/*
+AzureGraphSample/AzureGraphSample/bin/*
+AzureGraphSample/AzureGraphSample/obj/*
+AzureIdentitySample/.vs/*
+AzureIdentitySample/AzureIdentitySample/bin/*
+AzureIdentitySample/AzureIdentitySample/obj/*
