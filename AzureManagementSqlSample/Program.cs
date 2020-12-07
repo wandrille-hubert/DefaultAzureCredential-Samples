@@ -16,11 +16,8 @@ namespace AzureManagementSqlSample
 	{
 		static async Task Main(string[] args)
 		{
-			string tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47";
-			string subscriptionId = "43763bcd-8f74-45ca-829a-866ae1e1ee1d";
-
-			//string tenantId = "00000000-0000-0000-0000-000000000000";
-			//string subscriptionId = "00000000-0000-0000-0000-000000000000";
+			string tenantId = "00000000-0000-0000-0000-000000000000";
+			string subscriptionId = "00000000-0000-0000-0000-000000000000";
 
 			DefaultAzureCredential credential = new DefaultAzureCredential();
 
@@ -45,10 +42,11 @@ namespace AzureManagementSqlSample
 								AzureEnvironment.AzureGlobalCloud);
 
 			// Top level abstraction of Azure. https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.fluent.iazure?view=azure-dotnet
+			// .WithSubscription is optional if you wish to return resource beyond the scope of a single subscription.
 			IAzure azure = Microsoft.Azure.Management.Fluent.Azure
 							.Configure()
 							.WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
-							.Authenticate(credentials)
+							.Authenticate(credentials);
 							.WithSubscription(subscriptionId);
 
 			// Iterate through Microsoft.Sql top level resources (servers) and a list of databases (sub resources)
