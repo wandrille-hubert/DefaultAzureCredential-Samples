@@ -46,7 +46,7 @@ namespace AzureManagementSqlSample
 			IAzure azure = Microsoft.Azure.Management.Fluent.Azure
 							.Configure()
 							.WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
-							.Authenticate(credentials);
+							.Authenticate(credentials)
 							.WithSubscription(subscriptionId);
 
 			// Iterate through Microsoft.Sql top level resources (servers) and a list of databases (sub resources)
