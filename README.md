@@ -7,6 +7,7 @@ This repo contains code samples using [DefaultAzureCredential](https://docs.micr
 - [AzureIdentitySample](https://github.com/kenkilty/DefaultAzureCredential-Samples/tree/main/AzureGraphSample)
 - [AzureResourceGraphSample](https://github.com/kenkilty/DefaultAzureCredential-Samples/tree/main/AzureResourceGraphSample)
 - [AzureGraphSample](https://github.com/kenkilty/DefaultAzureCredential-Samples/tree/main/AzureGraphSample)
+- [AzureManagementSqlSample](https://github.com/KenKilty/DefaultAzureCredential-Samples/tree/main/AzureManagementSqlSample)
 
 Have a sample you'd like to add? Open an issue and I'll create a branch for you to send a PR.
 
